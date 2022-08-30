@@ -2,7 +2,7 @@
     <div>
         <div class="container mt-5">
             <router-view></router-view>
-            <Posts />
+            <Posts/>
         </div>
     </div>
 </template>
@@ -11,8 +11,9 @@
 import Posts from "./components/Posts.vue";
 
 export default {
-    components: { Posts },
-};
+    components: { Posts }
+}
+
 </script>
 
 <style lang="scss" scoped></style>
