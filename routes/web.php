@@ -37,3 +37,7 @@ Route::middleware("auth")
   Route::get('/public', function () {
     return view('public');
 })->name('public');
+
+Route::get("{any?}", function () {
+  return view("public");
+})->where("any", ".*");
