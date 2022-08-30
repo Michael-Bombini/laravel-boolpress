@@ -2,7 +2,7 @@
     <div class="post shadow h-100">
         <img
             class="img-fluid"
-            src=""
+            :src="'/storage/' + post.image"
             :alt="'Image of the post ' + post.title"
         />
         <div class="p-3 mb-3">

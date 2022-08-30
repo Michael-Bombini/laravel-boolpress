@@ -1,11 +1,13 @@
 <template>
     <div>
-        {{post}}
+        <img :src="'/storage/' + post.image" alt="" class="img-fluid" />
+        <h1>{{ post.title }}</h1>
+        <p class="text-medium">{{ post.description }}</p>
     </div>
 </template>
 
 <script>
-import axios from 'axios';
+import axios from "axios";
 
 export default {
     data() {
@@ -15,7 +17,7 @@ export default {
     },
 
     mounted() {
-        console.log(this.$route)
+        console.log(this.$route);
         axios.get("/api/posts/" + this.$route.params.id).then((resp) => {
             const data = resp.data;
             this.post = data;
@@ -24,4 +26,8 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.text-medium {
+    font-size: 1.5rem;
+}
+</style>

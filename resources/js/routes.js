@@ -1,10 +1,10 @@
 import VueRouter from "vue-router"
 import Show from "./pages/Show.vue";
-import Test from "./pages/Test.vue";
+import Posts from "./components/Posts.vue";
 
 export const routes = [
-    {    path : "/" , component : Test , name : 'test' },
+    {    path : "/public" , component : Posts , name : 'posts' },
     {    path : "/public/:id" , component : Show , name : 'show' },
-    {    path : "/public/test" , component : Show , name : '22' },
+
     
 ];
